@@ -1,0 +1,82 @@
+@import '../../../css/_vars';
+
+.card {
+  padding: 10px;
+  margin-bottom: 2rem;
+
+  border: 2px solid rgba(228, 181, 100, 1);
+  border-radius: 10px;
+  background-color: $clr_footer_loader;
+  background-color: rgb(39 36 36 / 50%);
+}
+
+.title {
+  font-size: 24px;
+  word-break: break-word;
+  color: rgba(242, 241, 236, 1);
+  font-weight: 600;
+  line-height: 33px;
+  word-break: break-word;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  margin: 0 1rem;
+
+  @media (min-width: 576px) {
+    margin: 0 1rem;
+    flex-direction: row;
+  }
+}
+
+.image {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+
+  flex-grow: 1;
+  flex-basis: 25%;
+}
+
+.content {
+  text-align: left;
+
+  max-width: 500px;
+  list-style: none;
+  color: rgb(226 209 209);
+  line-height: 25px;
+
+  flex-grow: 3;
+}
+
+.text {
+  font-size: 18px;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  position: relative;
+}
+
+.subtext {
+  color: rgb(185 175 175);
+  margin-top: 0;
+}
+
+.subtext:before {
+  content: '';
+
+  position: absolute;
+  left: -15px;
+  top: 9px;
+  width: 6px;
+  height: 6px;
+  border-radius: 100%;
+  background: $clr_gold_side;
+}
+
+.btn {
+  margin-top: 1rem;
+}
