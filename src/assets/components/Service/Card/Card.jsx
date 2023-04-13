@@ -1,12 +1,20 @@
-import s from './Card.module.scss'
-import png from '../../../img/example.png'
+import List from './List/List'
 
-export const Card = ({ title, list }) => {
+import s from './Card.module.scss'
+
+const buttonStyles = {
+  ...s.btn,
+  ...s.button,
+}
+
+export const Card = ({ title, list, image }) => {
   return (
     <div className={s.card}>
-      <p className={s.title}>{title}</p>
+      <h2 className={s.title}>{title}</h2>
       <div className={s.wrapper}>
-        <img src={png} alt="пример" className={s.image} />
+        <img src={image} alt="image" className={s.image} />
+
+        {/*<List items={list} />*/}
         <ul className={s.content}>
           {list.map((item, i) => (
             <li key={i} className={s.text}>
@@ -15,7 +23,9 @@ export const Card = ({ title, list }) => {
           ))}
         </ul>
       </div>
-      <button className={s.btn}>Получить помощь</button>
+      <button className={s.button}>
+        <span>Получить помощь</span>
+      </button>
     </div>
   )
 }

@@ -3,7 +3,7 @@ import { Service } from './assets/components/Service'
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
       <Service />
     </div>
   )

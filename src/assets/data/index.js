@@ -37,3 +37,10 @@ export const list_6 = [
   'Улуги неразрушающегося контроля',
   'Услуги лабораторий',
 ]
+
+export const image_1 = '../img/example.png'
+export const image_2 = '../img/example2.png'
+export const image_3 = '../img/example3.png'
+export const image_4 = '../img/example4.png'
+export const image_5 = '../img/example5.png'
+export const image_6 = '../img/example6.png'

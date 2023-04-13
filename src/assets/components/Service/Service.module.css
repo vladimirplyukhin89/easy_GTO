@@ -1,5 +1,6 @@
 .container {
   color: rgba(242, 241, 236, 1);
+  background-color: inherit;
 }
 
 .title {
