@@ -1,0 +1,108 @@
+@import '../../css/vars';
+
+.header {
+  display: flex;
+
+  margin-bottom: 4rem;
+
+  position: relative;
+  top: 0;
+  z-index: 1000;
+
+  .wrapper {
+    display: flex;
+
+    .tel {
+      color: $clr_gold;
+      border: 1px solid $clr_gold;
+      padding: 10px;
+
+      cursor: pointer;
+
+      &:hover {
+        color: $clr_gold_side;
+        border: 1px solid $clr_gold_side;
+      }
+
+      // Эффект потрясывания трубки телефона
+      &:hover .telephone {
+        animation: 1.5s ease-in-out 0s normal none running trambling-animation;
+      }
+
+      @media (min-width: 576px) {
+        margin-left: 0.5rem;
+        padding: 17px;
+      }
+
+      @media (min-width: 768px) {
+        margin-right: 1.5rem;
+      }
+    }
+
+    .number {
+      align-self: center;
+
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 1px;
+
+      min-width: 200px;
+      padding-bottom: 5px;
+      transition: 0.5s easy-in;
+      display: none;
+
+      @media (min-width: 767px) {
+        & {
+          display: block;
+        }
+      }
+
+      span {
+        color: $clr_gold;
+      }
+    }
+  }
+}
+
+// Эффект для кнопки дозвона
+.ripple_button {
+  display: inline-grid;
+  place-items: center;
+  position: relative;
+  isolation: isolate;
+  appearance: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  background-color: transparent;
+  overflow: hidden;
+}
+
+.ripple_button::before {
+  content: '';
+  position: absolute;
+  top: var(--y);
+  left: var(--x);
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 750ms;
+  z-index: -1;
+  width: 150%;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  background: #fff;
+  opacity: 0.5;
+}
+
+.pulse::before {
+  animation: pulse 500ms;
+}
+
+@keyframes pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+  }
+}

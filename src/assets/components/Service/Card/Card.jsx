@@ -2,12 +2,7 @@ import List from './List/List'
 
 import s from './Card.module.scss'
 
-const buttonStyles = {
-  ...s.btn,
-  ...s.button,
-}
-
-export const Card = ({ title, list, image }) => {
+const Card = ({ title, list, image }) => {
   return (
     <div className={s.card}>
       <h2 className={s.title}>{title}</h2>
@@ -29,3 +24,5 @@ export const Card = ({ title, list, image }) => {
     </div>
   )
 }
+
+export default Card

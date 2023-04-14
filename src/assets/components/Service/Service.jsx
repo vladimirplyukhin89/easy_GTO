@@ -1,4 +1,7 @@
-import { Card } from './Card/Card'
+import Header from '../Header/Header'
+import Footer from '../Footer/Footer'
+import Card from './Card/Card'
+
 import { list_1, list_2, list_3, list_4, list_5, list_6 } from '../../data'
 import img1 from '../../img/example.png'
 import img2 from '../../img/example8.png'
@@ -14,6 +17,7 @@ import s from './Service.module.css'
 export const Service = () => {
   return (
     <div className={s.container}>
+      <Header />
       <h2 className={s.title}>Инженерное сопровождение</h2>
       <div className={s.wrapper}>
         <Card
@@ -39,6 +43,7 @@ export const Service = () => {
         <Card title="Геодезические услуги" list={list_5} image={img5} />
         <Card title="Лабораторные услуги" list={list_6} image={img4} />
       </div>
+      {/*<Footer />*/}
     </div>
   )
 }
